@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {windowWidth} from '../utils/dimensions';
 
-const ListItem = ({data}) => {
+const ListItem = ({data, onPress}) => {
   return (
     <View
       style={{
@@ -34,6 +34,7 @@ const ListItem = ({data}) => {
         </View>
       </View>
       <TouchableOpacity
+        onPress={onPress}
         style={{
           backgroundColor: '#0aada8',
           padding: 10,

@@ -39,7 +39,7 @@ const Homescreen = ({navigation}) => {
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
             Hello John Doe
           </Text>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
               source={require('../assets/images/user-profile.jpg')}
               style={{width: 35, height: 35}}
@@ -100,9 +100,21 @@ const Homescreen = ({navigation}) => {
         </View>
         <View>
           {gamesTab === 1 &&
-            freeGames.map(item => <ListItem key={item.id} data={item} />)}
+            freeGames.map(item => (
+              <ListItem
+                key={item.id}
+                data={item}
+                onPress={() => navigation.navigate('GameDetails', {data: item})}
+              />
+            ))}
           {gamesTab === 2 &&
-            paidGames.map(item => <ListItem key={item.id} data={item} />)}
+            paidGames.map(item => (
+              <ListItem
+                key={item.id}
+                data={item}
+                onPress={() => navigation.navigate('GameDetails', {data: item})}
+              />
+            ))}
         </View>
       </ScrollView>
     </SafeAreaView>
