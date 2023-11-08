@@ -10,7 +10,7 @@ import {SafeAreaView, View, Text, TouchableOpacity} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import GamingImg from './assets/images/gaming.svg';
+import GamingImg from './src/assets/images/misc/gaming.svg';
 
 const Stack = createNativeStackNavigator();
 
