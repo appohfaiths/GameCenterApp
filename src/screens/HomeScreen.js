@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {
   View,
   Text,
@@ -15,9 +15,12 @@ import BannerSlider from '../components/BannerSlider';
 import {windowWidth} from '../utils/dimensions';
 import CustomSwitch from '../components/CustomSwitch';
 import ListItem from '../components/ListItem';
+import {AuthContext} from '../context/AuthContext';
 
 const Homescreen = ({navigation}) => {
   const [gamesTab, setGamesTab] = useState(1);
+
+  const {userInfo} = useContext(AuthContext);
 
   const renderBanner = ({item, index}) => {
     return <BannerSlider data={item} />;
@@ -37,7 +40,7 @@ const Homescreen = ({navigation}) => {
             marginBottom: 20,
           }}>
           <Text style={{fontSize: 18, fontFamily: 'Roboto-Medium'}}>
-            Hello John Doe
+            Hello {userInfo.displayName}
           </Text>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <ImageBackground
