@@ -2,7 +2,7 @@ repo_name: appohfaiths/GameCenterApp
 report_id: 1b30dd12189a0c229250709f0ce9d6ae
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-23T13:37:15+00:00'
+timestamp: '2024-02-29T19:34:58+00:00'
 requested_by: appohfaiths
 provider: github
 branch: main
@@ -172,7 +172,7 @@ tools:
   last_updated_by: KodjoCode
   last_updated_on: 2023-11-08 02:16:05.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.8.8
   license: MIT
